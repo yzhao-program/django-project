@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Notes</title>
+</head>
+<body>
+    <form action="/notebook/update/{{ notebook.id }}" method="post">
+        <table>
+            <tr>
+                <td>Title: </td>
+                <td><input type="text" name="title" value="{{ notebook.title }}"></td>
+            </tr>
+            <tr>
+                <td>Content: </td>
+                <td><textarea name="content" cols="30" rows="10">{{ notebook.content }}</textarea></td>
+            </tr>
+            <tr>
+                <td><a href="/notebook/notebooks">Cancel</a></td>
+                <td><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
